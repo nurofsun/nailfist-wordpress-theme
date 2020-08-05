@@ -143,10 +143,13 @@ add_action( 'widgets_init', 'nailfist_widgets_init' );
  * Enqueue scripts and styles.
  */
 function nailfist_scripts() {
+	// load all stylesheet
 	wp_enqueue_style( 'nailfist-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'nailfist-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'nailfist-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_style( 'nailfist-bulma', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
+	// load all scripts file and put it above </body> tag
+	wp_enqueue_script( 'nailfist-navigation', get_template_directory_uri() . 'assets/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'nailfist-app', get_template_directory_uri() . '/assets/js/app.js', array(), _S_VERSION, true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

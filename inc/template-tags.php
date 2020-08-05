@@ -64,23 +64,23 @@ if ( ! function_exists( 'nailfist_posted_by' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'nailfist_entry_category' ) ):
+if ( ! function_exists( 'nailfist_entry_categories' ) ):
 	function nailfist_entry_categories() {
 		if ('post' == get_post_type()) {
-			$categories = get_the_category();
 
-			if ($categories) {
-				if (is_single()) {
-					printf('<div class="cat-links">%1$s</div>', $categories);
-				}
-				else {
-                    printf('<a href="%1$s" role="button" class="tag is-primary">
-                        <span class="entry-category">%2$s</span>
-                    </a>', 
-                    esc_url(get_category_link( $categories[0]->term_id) ), 
-                    $categories[0]->name);
-				}
-			}
+            if (is_single()) {
+                $categories = get_the_category_list();
+                printf('<div class="cat-links">%1$s</div>', $categories);
+            }
+            else {
+                $categories = get_the_category();
+                $first_category = $categories[0];
+                printf('<a href="%1$s" role="button" class="tag is-primary">
+                    <span class="entry-category">%2$s</span>
+                </a>', 
+                esc_url(get_category_link( $first_category->term_id) ), 
+                $first_category->name);
+            }
 		}
 	}
 endif;
@@ -88,12 +88,12 @@ endif;
 if ( ! function_exists( 'nailfist_entry_tags' ) ):
 	function nailfist_entry_tags() {
 		if ('post' == get_post_type() && is_single()) {
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'nailfist' ) );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="entry-tags">%1$s</span>', $tags_list );
-			}
+            $tags_list = '';
+            $tags = get_tags();
+            foreach ($tags as $tag) {
+                $tags_list .= sprintf('<a class="tag is-light" href="%1$s" rel="tag">#%2$s</a>', get_tag_link( $tag->term_id ), $tag->name);
+            }
+            printf('<div class="tags">%1$s</div>', $tags_list);
 		}
 	}
 endif;

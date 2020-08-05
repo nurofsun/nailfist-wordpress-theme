@@ -48,9 +48,13 @@ if ( ! function_exists( 'nailfist_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
+        /**
+         * Bulma Navwalker
+         */
+        require_once get_template_directory() . '/inc/bulma-navwalker.php';
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'nailfist' ),
+				'header-menu' => esc_html__( 'Primary', 'nailfist' ),
 			)
 		);
 

@@ -11,12 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title is-size-2 is-size-4-mobile has-text-weight-bold">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php nailfist_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content content">
 		<?php
 		the_content();
 

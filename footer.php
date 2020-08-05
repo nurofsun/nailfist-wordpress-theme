@@ -11,19 +11,15 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'nailfist' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'nailfist' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'nailfist' ), 'nailfist', '<a href="http://underscores.me/">Nurahmat</a>' );
-				?>
+	<footer id="colophon" class="site-footer footer">
+		<div class="site-info has-text-centered">
+			<p class="is-size-7">
+				<a class="has-text-weight-bold has-text-dark is-link" href="<?php echo esc_url( home_url('/') ); ?>">
+						<?php bloginfo('name', 'nailfist'); ?>
+				</a>
+				&copy;
+				<?php echo date('Y'); ?>
+			</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

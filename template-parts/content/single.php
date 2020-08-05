@@ -9,29 +9,42 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('is-single'); ?>>
+    <div class="entry-thumbnail">
+        <?php nailfist_post_thumbnail(); ?>
+    </div>
 	<header class="entry-header">
 		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
+        the_title('<h1 class="entry-title title is-size-2 is-size-4-mobile">', '</h1>');
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
-				<?php
-				nailfist_posted_on();
-				nailfist_posted_by();
-				?>
+			<div class="entry-meta level is-mobile">
+                <div class="level-left">
+                    <div class="level-item">
+                        <div>
+                            <p>
+                                <?php
+                                nailfist_posted_on();
+                                ?>
+                            </p>
+                            <p>
+                                <?php nailfist_posted_by(); ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <div class="level-item">
+                        Reading Time
+                    </div>
+                </div>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php nailfist_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content content">
 		<?php
 		the_content(
 			sprintf(
@@ -58,6 +71,7 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php nailfist_entry_footer(); ?>
+        <?php nailfist_entry_categories(); ?>
+        <?php nailfist_entry_tags(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

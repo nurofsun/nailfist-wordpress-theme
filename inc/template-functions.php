@@ -35,3 +35,13 @@ function nailfist_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'nailfist_pingback_header' );
+
+function nailfist_excerpt_length() {
+    return 40;
+}
+add_action( 'excerpt_length', 'nailfist_excerpt_length' );
+
+function nailfist_excerpt_more() {
+    return '...';
+}
+add_action( 'excerpt_more', 'nailfist_excerpt_more' );

@@ -70,24 +70,6 @@ if ( post_password_required() ) {
 		endif;
 
 	endif; // Check for have_comments().
-        $comment_fields = array(
-            'author' => '<div class="field comment-author"><input class="input" name="author" type="text" placeholder="Name" required></div>',
-            'email' => '<div class="field comment-email"><input class="input" name="email" type="email" placeholder="Example@mail.com" required></div>',
-            'url' => '<div class="field comment-url"><input class="input" name="url" type="url" placeholder="https://yourwebsite.com"></div>',
-            'cookies' => '
-                <div class="field">
-                    <label for="wp-comment-cookies-consent">
-                        <input type="checkbox" class="checkbox" id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" value="yes">
-                        <small>Save my name, email, and website in this browser for the next time I comment.</small>
-                    </label>
-                </div>'        
-        );
-    $comment_form_args = array(
-        'fields' => $comment_fields,
-        'comment_field' => '<div class="field comment-field">
-            <textarea class="textarea" name="comment" aria-required="true" required placeholder="Say Something..."></textarea>
-        </div>'
-    );
-    comment_form( $comment_form_args);
+    nailfist_comment_form();
 	?>
 </div><!-- #comments -->

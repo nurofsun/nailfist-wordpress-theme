@@ -14,20 +14,28 @@ get_header();
         <div class="section">
             <div class="container">
                 <div class="columns">
-                    <div class="column is-two-thirds">
+                    <div class="column is-three-quarters">
                         <?php
                         while ( have_posts() ) :
                             the_post();
 
                             get_template_part( 'template-parts/content/single', get_post_type() );
-
-                            the_post_navigation(
-                                array(
-                                    'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'nailfist' ) . '</span> <span class="nav-title">%title</span>',
-                                    'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'nailfist' ) . '</span> <span class="nav-title">%title</span>',
-                                )
-                            );
-
+                        ?>
+                        <div class="section post-navigation">
+                            <nav class="level is-mpbile">
+                                <div class="level-left">
+                                    <div class="level-item">
+                                        <?php previous_post_link(); ?>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="level-item">
+                                        <?php next_post_link(); ?>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <?php
                             // If comments are open or we have at least one comment, load up the comment template.
                             if ( comments_open() || get_comments_number() ) :
                                 comments_template();

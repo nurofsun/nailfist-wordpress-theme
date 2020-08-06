@@ -134,9 +134,9 @@ function nailfist_widgets_init() {
 			'name'          => esc_html__( 'Sidebar', 'nailfist' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'nailfist' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'before_widget' => '<section id="%1$s" class="widget box %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
+			'before_title'  => '<h2 class="widget-title subtitle is-size-5 is-size-6-mobile has-text-weight-bold">',
 			'after_title'   => '</h2>',
 		)
 	);
@@ -180,7 +180,10 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
+/**
+ * Custom Comment Form
+ */
+require get_template_directory() . '/inc/template-comment-form.php';
 /**
  * Load Jetpack compatibility file.
  */

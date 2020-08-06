@@ -45,3 +45,4 @@ function nailfist_excerpt_more() {
     return '...';
 }
 add_action( 'excerpt_more', 'nailfist_excerpt_more' );
+

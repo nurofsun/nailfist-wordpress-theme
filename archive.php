@@ -14,7 +14,7 @@ get_header();
         <div class="section">
             <div class="container">
                 <div class="columns">
-                    <div class="column is-two-thirds is-centered">
+                    <div class="column is-three-quarters is-centered">
                     <?php if ( have_posts() ) : ?>
 
                         <header class="page-header">

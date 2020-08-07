@@ -14,18 +14,25 @@
                 <span></span>
             </a>
         </div>
-        <?php
-        wp_nav_menu( array(
-            'theme_location'    => 'header-menu',
-            'depth'             => 2,
-            'container'         => 'div',
-            'container_class'   => 'navbar-menu',
-            'items_wrap'        => '<div id="%1$s" class="%2$s">%3$s</div>',
-            'menu_class'        => 'navbar-end',
-            'menu_id'           => 'primary-menu',
-            'after'             => "</div>",
-            'walker'            => new Navwalker()
-        ));
-        ?>
+        <div class="navbar-menu">
+            <?php
+            wp_nav_menu( array(
+                'theme_location'    => 'header-menu',
+                'depth'             => 2,
+                'container'         => false,
+                'container_class'   => 'navbar-menu',
+                'items_wrap'        => '<div id="%1$s" class="%2$s">%3$s</div>',
+                'menu_class'        => 'navbar-start',
+                'menu_id'           => 'primary-menu',
+                'after'             => "</div>",
+                'walker'            => new Navwalker()
+            ));
+            ?>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <?php get_search_form(); ?>
+                </div>
+            </div>
+        </div>
     </div>
 </nav>

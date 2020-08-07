@@ -136,7 +136,7 @@ function nailfist_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'nailfist' ),
 			'before_widget' => '<section id="%1$s" class="widget box %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title subtitle is-size-5 is-size-6-mobile has-text-weight-bold">',
+			'before_title'  => '<h2 class="widget-title is-size-5 is-size-6-mobile has-text-weight-bold" style="margin-bottom: 10px;">',
 			'after_title'   => '</h2>',
 		)
 	);

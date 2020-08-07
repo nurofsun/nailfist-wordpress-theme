@@ -68,3 +68,8 @@ $ npm install
 Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
 
 Good luck!
+
+## Todo
+[ ] Styling tag cloud widget
+[ ] Styling single category in single.php (post)
+[ ] Customize bulma css.

@@ -21,7 +21,6 @@
     position: absolute;
     z-index: 10;
     bottom: 0px;
-    display: block;
     margin: 10px 15px;
     left: 0px;
     right: 0px; }
@@ -5867,10 +5866,10 @@ a.has-text-light:hover, a.has-text-light:focus {
 .has-background-light {
   background-color: whitesmoke !important; }
 
-.has-text-dark {
+.has-text-dark, .wp-caption {
   color: #363636 !important; }
 
-a.has-text-dark:hover, a.has-text-dark:focus {
+a.has-text-dark:hover, a.wp-caption:hover, a.has-text-dark:focus, a.wp-caption:focus {
   color: #1c1c1c !important; }
 
 .has-background-dark {
@@ -6419,7 +6418,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .is-size-6 {
   font-size: 1rem !important; }
 
-.is-size-7 {
+.is-size-7, .wp-caption {
   font-size: 0.75rem !important; }
 
 @media screen and (max-width: 768px) {
@@ -6683,7 +6682,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .is-uppercase {
   text-transform: uppercase !important; }
 
-.is-italic {
+.is-italic, .wp-caption {
   font-style: italic !important; }
 
 .has-text-weight-light {
@@ -7517,3 +7516,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
+
+.widget_recent_entries ul li {
+  border-bottom: 1px solid rgba(54, 54, 54, 0.1);
+  padding-bottom: 5px;
+  margin-bottom: 10px; }
+
+/* this is some requires css style. */
+.wp-caption {
+  padding: 7px 14px; }

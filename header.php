@@ -26,7 +26,11 @@
             <a class="skip-link screen-reader-text is-hidden" href="#primary"><?php esc_html_e( 'Skip to content', 'nailfist' ); ?></a>
 
             <header id="masthead" class="site-header">
-                <?php get_template_part('template-parts/header/navbar'); ?>
+                <?php 
+                    if ( ! is_404() ):
+                        get_template_part('template-parts/header/navbar'); 
+                    endif;
+                ?>
                 <?php 
                     if ( is_home() && is_front_page() ):
                         get_template_part('template-parts/header/hero'); 

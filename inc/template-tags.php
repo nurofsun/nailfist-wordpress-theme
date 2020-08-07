@@ -31,13 +31,12 @@ if ( ! function_exists( 'nailfist_posted_on' ) ) :
 		$output = sprintf(
 			'<span class="entry-date">
 				<span class="icon is-small">
-					<img src="%1$s" class="injectable">
+                    <i class="fas fa-calendar"></i>
 				</span>
 				<span>
-					%2$s
+					%1$s
 				</span>
 			</span>',
-			get_template_directory_uri() . '/assets/icons/calendar.svg',
 			$time_string
 		);
 
@@ -53,11 +52,10 @@ if ( ! function_exists( 'nailfist_posted_by' ) ) :
 		$byline = sprintf(
 			'<span class="entry-author">
 				<span class="icon is-small">
-					<img src="%1$s" class="injectable">
+                    <i class="fas fa-user"></i>
 				</span>
-				<span class="author vcard">%2$s</span>
+				<span class="author vcard">%1$s</span>
 			</span>',
-			get_template_directory_uri() . '/assets/icons/user.svg',
 			esc_html( get_the_author() )
 		);
 		echo $byline;
@@ -146,14 +144,13 @@ if ( ! function_exists( 'nailfist_read_more' ) ):
 	function nailfist_read_more() {
 		printf(
             '<a href="%1$s" role="button" class="button is-light is-readmore-button">
-                <span class="icon">
-                    %2$s
-                    <img src="%3$s" class="injectable">
+                <span>%2$s</span>
+                <span class="icon is-small">
+                    <i class="fas fa-chevron-right"></i>
                 </span>
             </a>',
 			esc_url( get_the_permalink() ),
             __('Continue Reading'),
-            get_template_directory_uri() . '/assets/icons/arrow-right.svg'
 		);
 	}
 endif;

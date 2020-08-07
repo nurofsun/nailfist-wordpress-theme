@@ -4,11 +4,11 @@ const { src, dest, series, parallel, watch } = require('gulp'),
 	sass = require('gulp-sass');
 const files = {
 	styles: {
-		source: './resources/styles/style.scss',
+		source: ['./resources/styles/style.scss'],
 		destination: './assets/css'
 	},
 	scripts: {
-		source: './resources/scripts/app.js',
+		source: ['./resources/scripts/app.js'],
 		destination: './assets/js'
 	}
 }

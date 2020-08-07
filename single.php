@@ -22,15 +22,15 @@ get_header();
                             get_template_part( 'template-parts/content/single', get_post_type() );
                         ?>
                         <div class="section post-navigation">
-                            <nav class="level is-mpbile">
+                            <nav class="level">
                                 <div class="level-left">
                                     <div class="level-item">
-                                        <?php previous_post_link(); ?>
+                                        <?php previous_post_link('<span class="icon"><i class="fas fa-chevron-left"></i></span><span>%link</span>'); ?>
                                     </div>
                                 </div>
                                 <div class="level-right">
                                     <div class="level-item">
-                                        <?php next_post_link(); ?>
+                                        <?php next_post_link('<span>%link</span><span class="icon"><i class="fas fa-chevron-right"></i></span>'); ?>
                                     </div>
                                 </div>
                             </nav>

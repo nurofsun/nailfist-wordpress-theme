@@ -17,8 +17,8 @@ get_header();
                     <div class="column is-three-quarters">
                         <?php if ( have_posts() ) : ?>
 
-                            <header class="page-header">
-                                <h1 class="page-title">
+                            <header class="page-header content">
+                                <h1 class="page-title title">
                                     <?php
                                     /* translators: %s: search query. */
                                     printf( esc_html__( 'Search Results for: %s', 'nailfist' ), '<span>' . get_search_query() . '</span>' );
@@ -44,7 +44,7 @@ get_header();
 
                         else :
 
-                            get_template_part( 'template-parts/content', 'none' );
+                            get_template_part( 'template-parts/content/none' );
 
                         endif;
                         ?>

@@ -43,7 +43,7 @@ const build = {
 	scripts(cb) {
 		return src(files.scripts.source)
 			.pipe(babel())
-			.pipe(dest(fies.scripts.destination))
+			.pipe(dest(files.scripts.destination))
 			cb();
 	}
 }

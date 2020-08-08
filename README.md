@@ -72,4 +72,4 @@ Good luck!
 ## Todo
 [x] Styling comment list
 [x] Styling single category in single.php (post)
-[ ] Customize bulma css.
+[x] Customize bulma css.

@@ -1,8 +1,11 @@
 @charset "utf-8";
 $primary: #141414;
+@import "base";
 @import "content/list";
 @import "content/single";
 @import "../../node_modules/bulma/bulma";
 @import "widget";
-@import "wp";
 @import "comment";
+.navbar-burger span {
+  height: 2px !important;
+}

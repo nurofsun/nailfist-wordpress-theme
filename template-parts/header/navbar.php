@@ -12,13 +12,13 @@
             <a class="navbar-item" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php echo bloginfo('name'); ?></a>
         <?php endif; ?>
 
-            <a role="button" class="burger navbar-burger" data-target="primary-menu">
+            <a role="button" class="burger navbar-burger" data-target="navbar-menu-1">
                 <span></span>
                 <span></span>
                 <span></span>
             </a>
         </div>
-        <div class="navbar-menu">
+        <div class="navbar-menu" id="navbar-menu-1">
             <?php
             wp_nav_menu( array(
                 'theme_location'    => 'header-menu',

@@ -13,9 +13,12 @@
 
 	<footer id="colophon" class="site-footer footer">
 		<div class="site-info has-text-centered">
-			<p class="is-size-7">
+            <p class="has-text-grey is-size-7">
+                Designed by <a href="https://github.com/nurofsun">Nurahmat</a>
+            </p>
+			<p class="is-size-6">
 				<a class="has-text-weight-bold has-text-dark is-link" href="<?php echo esc_url( home_url('/') ); ?>">
-						<?php bloginfo('name', 'nailfist'); ?>
+					<?php bloginfo('name', 'nailfist'); ?>
 				</a>
 				&copy;
 				<?php echo date('Y'); ?>

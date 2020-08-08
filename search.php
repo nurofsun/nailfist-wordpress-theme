@@ -40,7 +40,11 @@ get_header();
 
                             endwhile;
 
-                            the_posts_navigation();
+                        ?>
+                        <nav class="pagination is-centered is-small is-rounded" role="navigation" aria-label="pagination">
+                            <?php echo nailfist_bulma_pagination(); ?>
+                        </nav>
+                        <?php
 
                         else :
 

@@ -43,8 +43,8 @@ get_header();
                                 get_template_part( 'template-parts/content/list', get_post_type() );
 
                             endwhile;
-?>
-                        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                        ?>
+                        <nav class="pagination is-centered is-small is-rounded" role="navigation" aria-label="pagination">
                             <?php echo nailfist_bulma_pagination(); ?>
                         </nav>
                         <?php

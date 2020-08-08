@@ -186,6 +186,10 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/template-comment-form.php';
 /**
+ * Walker Comment
+ */
+require get_template_directory() . '/classes/class-nailfist-walker-comment.php';
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

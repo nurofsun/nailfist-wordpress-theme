@@ -11,7 +11,7 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-        <div class="section">
+        <section class="section">
             <div class="container">
                 <div class="columns">
                     <div class="column is-three-quarters">
@@ -49,8 +49,7 @@ get_header();
                     </div>
                 </div>
             </div>
-        </div>
-
+        </section>
 	</main><!-- #main -->
 
 <?php

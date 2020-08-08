@@ -66,18 +66,29 @@ if ( ! function_exists( 'nailfist_entry_categories' ) ):
 	function nailfist_entry_categories() {
 		if ('post' == get_post_type()) {
 
-            if (is_single()) {
-                $categories = get_the_category_list();
-                printf('<div class="cat-links">%1$s</div>', $categories);
-            }
-            else {
-                $categories = get_the_category();
-                $first_category = $categories[0];
-                printf('<a href="%1$s" role="button" class="tag is-primary">
-                    <span class="entry-category">%2$s</span>
-                </a>', 
-                esc_url(get_category_link( $first_category->term_id) ), 
-                $first_category->name);
+            $categories = get_the_category();
+            if ($categories) {
+                if (is_single()) {
+                    $all_categories = '';
+
+                    foreach ($categories as $category) {
+                        $all_categories .= sprintf('
+                        <a class="is-medium tag is-dark" href="%1$s">
+                            <span class="icon"><i class="fas fa-tag"></i></span>
+                            <span>%2$s</span>
+                        </a>', get_category_link($category->term_id), $category->name); 
+                    }
+
+                    printf('<div class="tags">%1$s</div>', $all_categories);
+                }
+                else {
+                    $first_category = $categories[0];
+                    printf('<a href="%1$s" role="button" class="tag is-primary">
+                        <span class="entry-category">%2$s</span>
+                    </a>', 
+                    esc_url(get_category_link( $first_category->term_id) ), 
+                    $first_category->name);
+                }
             }
 		}
 	}

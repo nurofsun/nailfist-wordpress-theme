@@ -21,7 +21,7 @@ if (! function_exists('nailfist_comment_form')):
         );
         $args = array(
             'fields' => $comment_fields,
-            'title_reply_before' => '<h3 class="is-size-5 has-text-weight-bold" id="reply-title">',
+            'title_reply_before' => '<h3 class="is-size-5 has-text-weight-bold subtitle" id="reply-title">',
             'title_reply_after' => '</h3>',
             'comment_notes_before' => '<div class="field"><small class="has-text-gray">Your email address will not be published</small></div>',
             'comment_field' => '<div class="field comment-field">

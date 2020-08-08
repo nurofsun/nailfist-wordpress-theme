@@ -26,7 +26,7 @@ if ( post_password_required() ) {
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) :
 		?>
-		<h2 class="comments-title">
+		<h2 class="comments-title subtitle">
 			<?php
 			$nailfist_comment_count = get_comments_number();
 			if ( '1' === $nailfist_comment_count ) {
@@ -48,16 +48,15 @@ if ( post_password_required() ) {
 
 		<?php the_comments_navigation(); ?>
 
-		<ol class="comment-list">
-			<?php
-			wp_list_comments(
-				array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				)
-			);
-			?>
-		</ol><!-- .comment-list -->
+        <?php
+        wp_list_comments(
+            array(
+                'short_ping' => true,
+                'style' => 'div',
+                'walker' => new Nailfist_Walker_Comment()
+            )
+        );
+        ?>
 
 		<?php
 		the_comments_navigation();

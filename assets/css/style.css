@@ -7525,3 +7525,11 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 /* this is some requires css style. */
 .wp-caption {
   padding: 7px 14px; }
+
+#comments #reply-title {
+  margin-top: 15px;
+  margin-bottom: 5px; }
+
+#comments .comment-body .avatar {
+  border-radius: 100px;
+  overflow: hidden; }

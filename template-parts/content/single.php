@@ -36,7 +36,7 @@
                 </div>
                 <div class="level-right">
                     <div class="level-item">
-                        Reading Time
+                        <?php nailfist_entry_categories(); ?>
                     </div>
                 </div>
 			</div><!-- .entry-meta -->
@@ -69,9 +69,7 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
 	<footer class="entry-footer">
-        <?php nailfist_entry_categories(); ?>
         <?php nailfist_entry_tags(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

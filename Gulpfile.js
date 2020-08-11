@@ -15,21 +15,21 @@ const files = {
 
 const compile = {
 	styles(cb) {
-		return src(files.styles.source)
+		return src(files.styles.source, { sourcemaps: true })
 			.pipe(sass())
-			.pipe(dest(files.styles.destination))
+			.pipe(dest(files.styles.destination, { sourcemaps: true }))
 			cb();
 	},
 	scripts(cb) {
-		return src(files.scripts.source)
+		return src(files.scripts.source, { sourcempas: true })
 			.pipe(babel())
-			.pipe(dest(files.scripts.destination))
+			.pipe(dest(files.scripts.destination, { sourcemaps: true }))
 			cb();
 	}
 }
 const build = {
 	styles(cb) {
-		return src(files.styles.source)
+		return src(files.styles.source, { sourcemaps: true })
 			.pipe(sass())
 			.pipe(postcss(
 				[
@@ -37,13 +37,13 @@ const build = {
 					require('cssnano')
 				]
 			))
-			.pipe(dest(files.styles.destination))
+			.pipe(dest(files.styles.destination, { sourcemaps: '.' }))
 			cb();
 	},
 	scripts(cb) {
-		return src(files.scripts.source)
+		return src(files.scripts.source, { sourcemaps: true })
 			.pipe(babel())
-			.pipe(dest(files.scripts.destination))
+			.pipe(dest(files.scripts.destination, { sourcemaps: '.' }))
 			cb();
 	}
 }

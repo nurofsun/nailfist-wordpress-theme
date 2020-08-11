@@ -5,3 +5,4 @@ document.addEventListener("DOMContentLoaded", function () {
     e.target.classList.toggle('is-active');
   });
 });
+//# sourceMappingURL=app.js.map
